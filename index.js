@@ -35,7 +35,8 @@ API_SERVER.use('/exercisemodels', exercisemodelController);
 API_SERVER.use('/goaltrackers', goaltrackersController);
 
 //start and listen to the server
-API_SERVER.listen(process.env.PORT, process.env.HOSTNAME, () => {
-    console.log("Server started");
-    console.log(`http://${process.env.HOSTNAME}:${process.env.PORT}`)
-});
+// API_SERVER.listen(process.env.PORT, process.env.HOSTNAME, () => {
+    API_SERVER.listen(process.env.PORT, "0.0.0.0", () => {
+      console.log("Server started");
+      console.log(`http://${process.env.HOSTNAME}:${process.env.PORT}`);
+    });
